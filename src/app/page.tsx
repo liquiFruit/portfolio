@@ -1,22 +1,32 @@
 import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from "@/components/ui/dialog"
+import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { ContactForm } from "@/components/contact-fom"
 
 export default function Home() {
 	return (
 		<div className="min-h-screen grid place-items-center">
-			<div className="max-w-lg">
-				<h2 className="text-3xl">
+			<div className="max-w-lg lt-sm:mx-4">
+				<h2 className="text-2xl sm:text-3xl">
 					John Prutton /{" "}
 					<span className="text-primary font-semibold">
 						LiquiHost
 					</span>
 				</h2>
-				<h1 className="mt-4 mb-8 text-5xl font-black tracking-widest">
+				<h1 className="mt-1 mb-2 sm:mt-4 sm:mb-8 text-4xl sm:text-5xl font-black tracking-widest">
 					<span className="text-primary">Fullstack</span> web
 					developer
 				</h1>
@@ -24,7 +34,7 @@ export default function Home() {
 				<Accordion type="single" collapsible>
 					<AccordionItem value="why">
 						<AccordionTrigger>
-							<h3 className="text-xl">
+							<h3 className="text-lg sm:text-xl">
 								<span className="text-primary">Why</span> choose
 								me:
 							</h3>
@@ -58,7 +68,7 @@ export default function Home() {
 
 					<AccordionItem value="what">
 						<AccordionTrigger>
-							<h3 className="text-xl">
+							<h3 className="text-lg sm:text-xl">
 								<span className="text-primary">What</span> I
 								offer:
 							</h3>
@@ -91,7 +101,7 @@ export default function Home() {
 
 					<AccordionItem value="when">
 						<AccordionTrigger>
-							<h3 className="text-xl">
+							<h3 className="text-lg sm:text-xl">
 								<span className="text-primary">When</span> can I
 								start:
 							</h3>
@@ -103,14 +113,36 @@ export default function Home() {
 					</AccordionItem>
 				</Accordion>
 
-				<div className="mt-8 flex flex-row gap-4 w-full children:w-full children:text-xl!">
-					<Button size={"lg"} className="font-bold">
-						Hire me
-					</Button>
+				<div className="mt-8 flex flex-col sm:flex-row gap-4 w-full children:w-full children:text-xl!">
+					<Dialog>
+						<DialogTrigger asChild>
+							<Button size={"lg"}>Let's chat</Button>
+						</DialogTrigger>
+						<DialogContent>
+							<DialogHeader>
+								<DialogTitle>Let's chat</DialogTitle>
+								<DialogDescription>
+									Reach out to me and describe your ideas or
+									problems. I will be in touch shortly
+								</DialogDescription>
+							</DialogHeader>
+							<ContactForm />
+						</DialogContent>
+					</Dialog>
 
-					<Button size={"lg"} variant={"ghost"}>
-						Let's chat
-					</Button>
+					<Dialog>
+						<DialogTrigger asChild>
+							<Button size={"lg"} variant={"secondary"}>
+								Pricing
+							</Button>
+						</DialogTrigger>
+						<DialogContent>
+							<DialogHeader>
+								<DialogTitle>Prcing</DialogTitle>
+							</DialogHeader>
+							<div>test</div>
+						</DialogContent>
+					</Dialog>
 				</div>
 			</div>
 		</div>
