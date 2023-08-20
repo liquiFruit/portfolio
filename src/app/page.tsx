@@ -13,7 +13,6 @@ import {
 	AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import { ContactForm } from "@/components/contact-fom"
 
 export default function Home() {
@@ -114,21 +113,7 @@ export default function Home() {
 				</Accordion>
 
 				<div className="mt-8 flex flex-col sm:flex-row gap-4 w-full children:w-full children:text-xl!">
-					<Dialog>
-						<DialogTrigger asChild>
-							<Button size={"lg"}>Let's chat</Button>
-						</DialogTrigger>
-						<DialogContent>
-							<DialogHeader>
-								<DialogTitle>Let's chat</DialogTitle>
-								<DialogDescription>
-									Reach out to me and describe your ideas or
-									problems. I will be in touch shortly
-								</DialogDescription>
-							</DialogHeader>
-							<ContactForm />
-						</DialogContent>
-					</Dialog>
+					<ContactForm />
 
 					<Dialog>
 						<DialogTrigger asChild>
