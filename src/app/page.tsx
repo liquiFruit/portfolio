@@ -13,7 +13,10 @@ import {
 	AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
 import { ContactForm } from "@/components/contact-fom"
+import { Separator } from "@/components/ui/separator"
 
 export default function Home() {
 	return (
@@ -125,7 +128,65 @@ export default function Home() {
 							<DialogHeader>
 								<DialogTitle>Prcing</DialogTitle>
 							</DialogHeader>
-							<div>test</div>
+
+							<Tabs defaultValue="consultancy">
+								<div className="mx-auto w-fit">
+									<TabsList>
+										<TabsTrigger value="consultancy">
+											Consultancy
+										</TabsTrigger>
+
+										<TabsTrigger value="frontend">
+											Frontend
+										</TabsTrigger>
+
+										<TabsTrigger value="fullstack">
+											Fullstack
+										</TabsTrigger>
+									</TabsList>
+								</div>
+
+								<TabsContent value="consultancy">
+									I offer one-on-one consultancy and advice,
+									with the first 45 minutes free and a flat
+									rate thereafter.
+									<Separator className="my-2" />
+									<div className="flex flex-row justify-between">
+										<p>Estimate:</p>
+										<p className="text-primary">
+											R150/hour
+										</p>
+									</div>
+								</TabsContent>
+
+								<TabsContent value="frontend">
+									This service includes the design and
+									development of a small/medium statically
+									generated webpage.
+									<Separator className="my-2" />
+									<div className="flex flex-row justify-between">
+										<p>Estimate:</p>
+										<p className="text-primary">
+											R5,000-R10,000
+										</p>
+									</div>
+								</TabsContent>
+
+								<TabsContent value="fullstack">
+									This service includes the the design and
+									development of a small/medium web
+									application, complete with features like
+									user authentication, cloud database
+									integration, and more. generated webpage.
+									<Separator className="my-2" />
+									<div className="flex flex-row justify-between">
+										<p>Estimate:</p>
+										<p className="text-primary">
+											R10,000-R25,000
+										</p>
+									</div>
+								</TabsContent>
+							</Tabs>
 						</DialogContent>
 					</Dialog>
 				</div>
