@@ -57,7 +57,7 @@ export function ContactDialog() {
 			<DialogTrigger asChild>
 				<Button size={"lg"}>
 					<MessageCircleIcon className="mr-2 -scale-x-full" />
-					Let's chat
+					Let&apos;s chat
 				</Button>
 			</DialogTrigger>
 			<DialogContent>

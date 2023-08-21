@@ -25,7 +25,10 @@ export function ServicesDialog() {
 				<DialogHeader>
 					<DialogTitle>Prcing</DialogTitle>
 				</DialogHeader>
-
+				<DialogDescription>
+					These prices are estimates. Please contact me for a more
+					accurate quote.
+				</DialogDescription>
 				<Tabs defaultValue="consultancy">
 					<div className="mx-auto w-fit">
 						<TabsList className="flex-wrap h-fit">
