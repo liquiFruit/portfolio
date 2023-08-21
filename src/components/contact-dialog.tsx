@@ -62,7 +62,7 @@ export function ContactDialog() {
 			</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
-					<DialogTitle>Let's chat</DialogTitle>
+					<DialogTitle>Let&apos;s chat</DialogTitle>
 					<DialogDescription>
 						Describe your ideas or problems and I will be in touch
 						as soon as possible.
