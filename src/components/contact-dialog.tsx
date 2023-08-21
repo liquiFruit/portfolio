@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { useState } from "react"
 
+import { MessageCircleIcon } from "lucide-react"
+
 import {
 	Dialog,
 	DialogContent,
@@ -33,7 +35,7 @@ const FormSchema = z.object({
 	message: z.string().optional(),
 })
 
-export function ContactForm() {
+export function ContactDialog() {
 	const [formOpen, setFormOpen] = useState(false)
 	const [isSent, setIsSent] = useState(false)
 
@@ -53,14 +55,17 @@ export function ContactForm() {
 	return (
 		<Dialog open={formOpen} onOpenChange={setFormOpen}>
 			<DialogTrigger asChild>
-				<Button size={"lg"}>Let's chat</Button>
+				<Button size={"lg"}>
+					<MessageCircleIcon className="mr-2 -scale-x-full" />
+					Let's chat
+				</Button>
 			</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
 					<DialogTitle>Let's chat</DialogTitle>
 					<DialogDescription>
-						Reach out to me and describe your ideas or problems. I
-						will be in touch shortly
+						Describe your ideas or problems and I will be in touch
+						as soon as possible.
 					</DialogDescription>
 					<Form {...form}>
 						<form
